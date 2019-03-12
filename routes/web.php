@@ -11,6 +11,31 @@
 |
 */
 
+Route::view('/', 'welcome');
+
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
+
+Route::get('/inscription', 'InscriptionController@formulaire');
+Route::post('/inscription', 'InscriptionController@traitement');
+
+Route::get('/connexion', 'ConnexionController@formulaire');
+Route::post('/connexion', 'ConnexionController@traitement');
+
+Route::get('/utilisateurs', 'UtilisateursController@liste');
+
+Route::group([
+    'middleware' => 'App\Http\Middleware\Auth',
+], function () {
+    Route::get('/mon-compte', 'CompteController@accueil');
+    Route::get('/deconnexion', 'CompteController@deconnexion');
+    Route::post('/modification-mot-de-passe', 'CompteController@modificationMotDePasse');
+
+    Route::post('/messages', 'MessagesController@nouveau');
+
+    Route::post('/{email}/suivis', 'SuivisController@nouveau');
+    Route::delete('/{email}/suivis', 'SuivisController@enlever');
+});
+
+Route::get('/{email}', 'UtilisateursController@voir');

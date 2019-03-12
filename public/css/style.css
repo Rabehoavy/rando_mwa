@@ -1,0 +1,60 @@
+html, body {
+    color: #000000 ;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 200;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h5 {
+    color: #1a75ff; 
+    font-family: 'Raleway', sans-serif;
+    margin: 3em;
+    text-align: center;
+}
+
+footer {
+    background-color: #0da0b2;
+    color: white; 
+    width: 100%;
+    height: auto;
+    margin: auto;
+    padding: 20px 0px;
+
+}
+
+.socialmedia {
+    width: 100%;
+    height: auto;
+    margin: 10px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.socialmedia a {
+    display: flex;
+    width: 60px;
+    height: 60px;
+    background-color: burlywood ;    
+    border-radius: 50%;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    transition: 0.4s;
+    float: left;
+    font-size: 20px;
+    text-decoration: none;
+    margin: 5px;
+}
+
+.socialmedia a:hover {
+    background-color: #000000;
+}
+
+
+.button {
+    background-color: #0da0b2;
+    color: #ffffff;
+    margin: 3em;
+}
