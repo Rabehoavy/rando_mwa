@@ -11,8 +11,6 @@
 |
 */
 
-Route::view('/', 'welcome');
-
 Route::get('/', function () {
     return view('index');
 });
@@ -26,6 +24,8 @@ Route::post('/connexion', 'ConnexionController@traitement');
 Route::get('/utilisateurs', 'UtilisateursController@liste');
 
 Route::get('/randonnees', 'RandonneesController@liste');
+Route::get('/randonnees', 'RandonneesController@formulaire');
+Route::post('/randonnees', 'RandonneesController@traitement');
 
 Route::group([
     'middleware' => 'App\Http\Middleware\Auth',
