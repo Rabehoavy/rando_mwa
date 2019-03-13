@@ -28,7 +28,8 @@
         
         public function getAllInfo() {
            
-            echo '<div class="card align-item-center text-center" style="width: 18rem;">';
+        echo '<div class="card justify-content-center text-center m-1">';
+            echo '<div class="card align-item-center text-center">';
             echo '<div class="card-body">';
             echo '<h5 class="card-title">'.$this->nom.'</h5>';
             echo '<p class="card-text">Cette randonnée de '.$this->distance.' . Son niveau de difficulté : '.$this->difficulte.'.</p></div>';
@@ -37,6 +38,8 @@
             echo '</div>';
             }
     
+
+            
   }
 
   $mafate = new Sites ('Notre Dame de La Paix', 'Difficile','20 kms', '9h', '1150 m', 'boucle', '17 mars 2019');

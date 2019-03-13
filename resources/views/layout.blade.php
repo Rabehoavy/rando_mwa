@@ -10,7 +10,6 @@
         <link href="{{ asset('css/style.css') }}" rel="stylesheet">
         <link href="{{ asset('css/cards.css') }}" rel="stylesheet">
 
-        <script type="text/javascript" src="{{ asset('js/todolist.js') }}"></script>
 
         <!--Liens CDN Bootstrap-->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -40,11 +39,11 @@
     <footer>
     <div class="container text-center">
     
-    <div class="">
     <h5 class="text-center text-white m-3">Nous contacter</h2>
                     <div class="row">
                         <div class="col-md-1"></div>
                         <div class="col-md-3">
+                                <!--1er flip box-->
                             <div class="flip-box">
                                 <div class="flip-box-inner">
                                     <div class="flip-box-front">
@@ -103,7 +102,6 @@
                 echo '<a href="#" class="text-white">'.$mentions[$i].'</a><br>';
             }
             echo '<br><br>';
-
     ?>
     </div>
     
