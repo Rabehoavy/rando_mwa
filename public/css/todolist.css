@@ -56,7 +56,7 @@
     width: 7px;
   }
   
-  /* Style du bouton fermer */
+  /* Style the close button */
   .close {
     position: absolute;
     right: 0;
@@ -65,13 +65,13 @@
   }
   
   .close:hover {
-    background-color: #1a75ff;
+    background-color: #f44336;
     color: white;
   }
   
   /* Style the header */
   .header {
-    background-color: #1a75ff;
+    background-color: #f44336;
     padding: 30px 40px;
     color: white;
     text-align: center;
