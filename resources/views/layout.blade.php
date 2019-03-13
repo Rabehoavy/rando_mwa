@@ -39,13 +39,13 @@
 
 
     <footer>
+        <!------ La partie footer commune à toutes les pages-------------->
     <div class="container text-center">
-    
-    <div class="">
     <h5 class="text-center text-white m-3">Nous contacter</h2>
                     <div class="row">
                         <div class="col-md-1"></div>
                         <div class="col-md-3">
+                                <!--1er flip box-->
                             <div class="flip-box">
                                 <div class="flip-box-inner">
                                     <div class="flip-box-front">
@@ -60,6 +60,7 @@
                         </div>
                         <div class="col-md-1"></div>
 
+                                <!--2ème flip box-->
                         <div class="col-md-3">
                             <div class="flip-box">
                                 <div class="flip-box-inner">
@@ -69,12 +70,12 @@
                                     </div>
                                     <div class="flip-box-back">
                                         <p class="m-3">0262 92 10 72</p>
-
                                     </div>
                                 </div>
                             </div>
                         </div>
 
+                        <!--3ème flip box-->
                         <div class="col-md-1"></div>
                         <div class="col-md-3">
                             <div class="flip-box">
