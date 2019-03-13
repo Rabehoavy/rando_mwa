@@ -21,6 +21,8 @@ Route::post('/connexion', 'ConnexionController@traitement');
 
 Route::get('/utilisateurs', 'UtilisateursController@liste');
 
+Route::get('/randonnees', 'RandonneesController@liste');
+
 Route::group([
     'middleware' => 'App\Http\Middleware\Auth',
 ], function () {

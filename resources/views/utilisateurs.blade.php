@@ -2,7 +2,7 @@
 
 @section('contenu')
     <div class="section">
-        <h1 class="title is-1">Bienvenue !</h1>
+        <h1 class="title is-1">Liste des membres</h1>
 
         <ul>
             @foreach($utilisateurs as $utilisateur)

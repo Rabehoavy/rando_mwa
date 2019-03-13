@@ -6,11 +6,11 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Contracts\Auth\Authenticatable;
 use Illuminate\Auth\Authenticatable as BasicAuthenticatable;
 
-class Utilisateur extends Model implements Authenticatable
+class Randonnee extends Model implements Authenticatable
 {
     use BasicAuthenticatable;
 
-    protected $fillable = ['nom', 'prenom', 'telephone', 'email', 'mot_de_passe'];
+    protected $fillable = ['utilisateur_id', 'nom', 'difficulte', 'distance', 'duree', 'denivele', 'type_trajet', 'date'];
 
     public function messages()
     {
@@ -19,12 +19,12 @@ class Utilisateur extends Model implements Authenticatable
 
     public function suivis()
     {
-        return $this->belongsToMany(Utilisateur::class, 'suivis', 'suiver_id', 'suivi_id');
+        return $this->belongsToMany(Randonnee::class, 'suivis', 'suiver_id', 'suivi_id');
     }
 
-    public function suit($utilisateur)
+    public function suit($randonnee)
     {
-        return $this->suivis()->where('suivi_id', $utilisateur->id)->exists();
+        return $this->suivis()->where('suivi_id', $randonnee->id)->exists();
     }
 
     /**

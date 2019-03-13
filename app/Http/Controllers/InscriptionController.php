@@ -14,6 +14,9 @@ class InscriptionController extends Controller
     public function traitement()
     {
         request()->validate([
+            'name' => ['required'],
+            'first_name' => ['required'],
+            'phone' => ['required'],
             'email' => ['required', 'email'],
             'password' => ['required', 'confirmed', 'min:8'],
             'password_confirmation' => ['required'],
@@ -22,11 +25,14 @@ class InscriptionController extends Controller
         ]);
 
         $utilisateur = Utilisateur::create([
+            'nom' => request('name'),
+            'prenom' => request('first_name'),
+            'telephone' => request('phone'),
             'email' => request('email'),
             'mot_de_passe' => bcrypt(request('password')),
         ]);
 
-        return "Nous avons reçu votre email qui est " . request('email') . ' et votre mot de passe est ' . request('password');
+        return "Nous avons reçu votre email qui est " . request('email');
     }
 }
 

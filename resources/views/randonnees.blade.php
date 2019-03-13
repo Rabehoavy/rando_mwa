@@ -1,7 +1,23 @@
 @extends('layout')
 
 @section('contenu')
-<form action="/inscription" method="post" class="section">
+    <div class="section">
+        <h1 class="title is-1">Liste des randonnées !</h1>
+
+        <ul>
+            @foreach($randonnees as $randonnee)
+                <li>
+                    <a href="/{{ $randonnee->nom }}">{{ $randonnee->nom }}</a> 
+                    {{ $randonnee->difficulte }} {{ $randonnee->distance }}
+                    {{ $randonnee->duree }}  {{ $randonnee->denivele }}
+                    {{ $randonnee->type_trajet }}  {{ $randonnee->date }}
+                </li>
+            @endforeach
+        </ul>
+    </div>
+
+    @if (auth()->check() AND auth()->user()->id === $utilisateur->id)
+        <form action="/randonnees" method="post" class="section">
 {{ csrf_field() }}
 
     <div class="field">
@@ -66,8 +82,20 @@
 
     <div class="field">
         <div class="control">
-            <button class="button is-link" type="submit">M'inscrire</button>
+            <button class="button is-link" type="submit">Créer</button>
         </div>
     </div>
 </form>
+
+        @endif
+
+        @foreach ($utilisateur->randonnees as $randonnee)
+            <hr>
+            <p>
+                <strong>{{ $randonnee->created_at }}</strong><br>
+                {{ $randonnee->nom }}
+            </p>
+        @endforeach
+    </div>
+
 @endsection
