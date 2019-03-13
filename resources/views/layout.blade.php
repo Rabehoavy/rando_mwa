@@ -58,34 +58,77 @@ echo "              <span>×</span>\n";
 echo "            </button>\n";
 echo "          </div>\n";
 echo "          <div class=\"modal-body row\">\n";
-echo "            <form class=\"col\" action=\"test.php\">\n";
-echo "              <div class=\"form-group\">\n";
-echo "                <label for=\"nom\" class=\"form-control-label\">Nom</label>\n";
-echo "                <input type=\"text\" class=\"form-control\" name =\"nom\" id=\"nom\" placeholder=\"Votre nom\">\n";
-echo "              </div>\n";
-echo "              <div class=\"form-group\">\n";
-echo "                <label for=\"nom\" class=\"form-control-label\">Prénom</label>\n";
-echo "                <input type=\"text\" class=\"form-control\" name =\"nom\" id=\"nom\" placeholder=\"Votre prénom\">\n";
-echo "              </div>\n";
-echo "              <div class=\"form-group\">\n";
-echo "                <label for=\"nom\" class=\"form-control-label\">Numéro de téléphone</label>\n";
-echo "                <input type=\"text\" class=\"form-control\" name =\"nom\" id=\"nom\" placeholder=\"Votre numéro de téléphone\">\n";
-echo "              </div>\n";
-echo "\n";
-echo "              <div class=\"form-group\">\n";
-echo "                <label for=\"email\" class=\"form-control-label\">Email</label>\n";
-echo "                <input type=\"email\" class=\"form-control\" name=\"email\" id=\"email\" placeholder=\"Votre Email\">\n";
-echo "              </div>\n";
-echo "              <div class=\"form-group\">\n";
-echo "                <label for=\"password\" class=\"form-control-label\">Mot de passe</label>\n";
-echo "                <input type=\"password\" class=\"form-control\" name =\"password\" id=\"password\" placeholder=\"Votre mot de passe\">\n";
-echo "              </div>\n";
-echo "              <div class=\"form-group\">\n";
-echo "                <label for=\"nom\" class=\"form-control-label\">Nom</label>\n";
-echo "                <input type=\"password\" class=\"form-control\" name =\"password_confirmation\" id=\"password_confirmation\" placeholder=\"Confirmez votre mot de passe\">\n";
-echo "              </div>\n";
-echo "              <button type=\"submit\" class=\"btn btn-primary pull-right\">Envoyer</button>\n";
-echo "            </form>\n";
+?>
+            <form action="/inscription" method="post" class="col">
+            {{ csrf_field() }}
+
+                <div class="form-group">
+                    <label class="form-control-label" for="name">Nom</label>
+                    <div class="control">
+                        <input class="form-control" type="text" name="name" id="name" placeholder="Votre nom" value="{{ old('name') }}" required>
+                    </div>
+                    @if($errors->has('name'))
+                        <p class="alert alert-danger">{{ $errors->first('name') }}</p>
+                    @endif
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" for="first_name">Prénom</label>
+                    <div class="control">
+                        <input class="form-control" type="text" name="first_name"  id="first_name" placeholder="Votre prénom" value="{{ old('first_name') }}" required>
+                    </div>
+                    @if($errors->has('first_name'))
+                        <p class="alert alert-danger">{{ $errors->first('first_name') }}</p>
+                    @endif
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" for="phone">Numéro de téléphone</label>
+                    <div class="control">
+                        <input class="form-control" type="text" name="phone" id="phone" placeholder="Votre numéro de téléphone" value="{{ old('phone') }}" required>
+                    </div>
+                    @if($errors->has('phone'))
+                        <p class="alert alert-danger">{{ $errors->first('phone') }}</p>
+                    @endif
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" for="email">Email</label>
+                    <div class="control">
+                        <input class="form-control" type="email" name="email" id="email" placeholder="Votre Email" value="{{ old('email') }}" required>
+                    </div>
+                    @if($errors->has('email'))
+                        <p class="alert alert-danger">{{ $errors->first('email') }}</p>
+                    @endif
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" for="password">Mot de passe</label>
+                    <div class="control">
+                        <input class="form-control" type="password" name="password" id="password" placeholder="Votre mot de passe" required>
+                    </div>
+                    @if($errors->has('password'))
+                        <p class="alert alert-danger">{{ $errors->first('password') }}</p>
+                    @endif
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" for="password_confirmation">Mot de passe (confirmation)</label>
+                    <div class="control">
+                        <input class="form-control" type="password" placeholder="Confirmez votre mot de passe" name="password_confirmation" id="password_confirmation" required>
+                    </div>
+                    @if($errors->has('password_confirmation'))
+                        <p class="alert alert-danger">{{ $errors->first('password_confirmation') }}</p>
+                    @endif
+                </div>
+
+                <div class="form-group">
+                    <div class="control">
+                        <button class="btn btn-primary pull-right" type="submit">M'inscrire</button>
+                    </div>
+                </div>
+            </form>
+<?php
 echo "          </div>\n";
 echo "        </div>\n";
 echo "      </div>\n";
@@ -103,17 +146,37 @@ echo "              <span>×</span>\n";
 echo "            </button>\n";
 echo "          </div>\n";
 echo "          <div class=\"modal-body row\">\n";
-echo "            <form class=\"col\" action=\"test.php\">\n";
-echo "              <div class=\"form-group\">\n";
-echo "                <label for=\"email\" class=\"form-control-label\">Email</label>\n";
-echo "                <input type=\"email\" class=\"form-control\" name=\"email\" id=\"email\" placeholder=\"Votre Email\">\n";
-echo "              </div>\n";
-echo "              <div class=\"form-group\">\n";
-echo "                <label for=\"password\" class=\"form-control-label\">Mot de passe</label>\n";
-echo "                <input type=\"password\" class=\"form-control\" name =\"password\" id=\"password\" placeholder=\"Votre mot de passe\">\n";
-echo "              </div>\n";
-echo "              <button type=\"submit\" class=\"btn btn-primary pull-right\">Connexion</button>\n";
-echo "            </form>\n";
+?>
+                <form action="/connexion" method="post" class="col">
+                    {{ csrf_field() }}
+
+                    <div class="form-group">
+                        <label class="form-control-label">Email</label>
+                        <div class="control">
+                            <input class="form-control" type="email" name="email" value="{{ old('email') }}" placeholder="Votre Email">
+                        </div>
+                        @if($errors->has('email'))
+                            <p class="alert alert-danger">{{ $errors->first('email') }}</p>
+                        @endif
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-control-label">Mot de passe</label>
+                        <div class="control">
+                            <input class="form-control" type="password" name="password" placeholder="Votre mot de passe">
+                        </div>
+                        @if($errors->has('password'))
+                            <p class="alert alert-danger">{{ $errors->first('password') }}</p>
+                        @endif
+                    </div>
+
+                    <div class="form-group">
+                        <div class="control">
+                            <button class="btn btn-primary pull-right" type="submit">Connexion</button>
+                        </div>
+                    </div>
+                </form>
+<?php
 echo "          </div>\n";
 echo "        </div>\n";
 echo "      </div>\n";
