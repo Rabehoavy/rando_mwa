@@ -27,4 +27,34 @@ class RandonneesController extends Controller
 
         ]);
     }
+    public function formulaire()
+    {
+        return view('randonnees');
+    }
+
+    public function traitement()
+    {
+        request()->validate([
+            'name' => ['required'],
+            'difficulty' => ['required'],
+            'distance' => ['required'],
+            'duration' => ['required'],
+            'height_difference' => ['required'],
+            'type_trajet' => ['required'],
+            'date' => ['required'],
+        ]);
+
+        $utilisateur = Randonnee::create([
+            'utilisateur_id' => request(user()->id),
+            'nom' => request('name'),
+            'difficulte' => request('difficulty'),
+            'distance' => request('distance'),
+            'duree' => request('duration'),
+            'denivele' => request('height_difference'),
+            'type_trajet' => request('type_trajet'),
+            'date' => request('date'),
+        ]);
+
+        return "Randonnée créer";
+    }
 }
