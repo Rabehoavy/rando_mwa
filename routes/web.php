@@ -19,6 +19,10 @@ Route::get('/todolist', function(){
     return view('todolist');
 });
 
+Route::get('/', function () {
+    return view('index');
+});
+
 Route::get('/inscription', 'InscriptionController@formulaire');
 Route::post('/inscription', 'InscriptionController@traitement');
 
