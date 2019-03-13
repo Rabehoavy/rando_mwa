@@ -28,7 +28,7 @@
         
         public function getAllInfo() {
            
-            echo '<div class="card justify-content-center text-centerm-1" style="width: 18rem;">';
+        echo '<div class="card justify-content-center text-centerm-1" style="width: 18rem;">';
             echo '<div class="card align-item-center text-center" style="width: 18rem;">';
             echo '<div class="card-body">';
             echo '<h5 class="card-title">'.$this->nom.'</h5>';
@@ -38,9 +38,6 @@
             echo '</div>';
             }
     
-
-
-
 
   }
 
