@@ -37,58 +37,59 @@
 
 
     <footer>
-    <div class="container text-center">
-    
-    <h5 class="text-center text-white m-3">Nous contacter</h2>
-                    <div class="row">
-                        <div class="col-md-1"></div>
-                        <div class="col-md-3">
-                                <!--1er flip box-->
-                            <div class="flip-box">
-                                <div class="flip-box-inner">
-                                    <div class="flip-box-front">
-                                        <h6 class="m-3">Nous écrire</h6><br><br>
-                                    </div>
-                                    <div class="flip-box-back">
-                                        <p class="m-3">rando@mwa.com</p>
+<div class="container text-center">
 
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-1"></div>
+    <h5 class="text-center text-white m-3">Nous contacter</h5>
+    <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-3">
+            <!--1er flip box-->
+            <div class="flip-box">
+                <div class="flip-box-inner">
+                    <div class="flip-box-front">
+                        <h6 class="m-3">Nous écrire</h6><br><br>
+                    </div>
+                    <div class="flip-box-back">
+                        <p class="m-3">rando@mwa.com</p>
 
-                        <div class="col-md-3">
-                            <div class="flip-box">
-                                <div class="flip-box-inner">
-                                    <div class="flip-box-front">
-                                        <h6 class="m-3">Nous appeler</h6><br><br>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-1"></div>
 
-                                    </div>
-                                    <div class="flip-box-back">
-                                        <p class="m-3">0262 92 10 72</p>
+        <div class="col-md-3">
+            <div class="flip-box">
+                <div class="flip-box-inner">
+                    <div class="flip-box-front">
+                        <h6 class="m-3">Nous appeler</h6><br><br>
 
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    </div>
+                    <div class="flip-box-back">
+                        <p class="m-3">0262 92 10 72</p>
 
-                        <div class="col-md-1"></div>
-                        <div class="col-md-3">
-                            <div class="flip-box">
-                                <div class="flip-box-inner">
-                                    <div class="flip-box-front">
-                                        <h6 class="m-3">Nous trouver</h6>
-                                    </div>
-                                    <div class="flip-box-back">
-                                        <p>14 rue Henri Cornu, Technopole,<br>97490 Sainte-Clotilde </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-        </div>   
+                    </div>
+                </div>
+            </div>
+        </div>
 
-    <div class="row socialmedia justify-content-center">
+        <div class="col-md-1"></div>
+        <div class="col-md-3">
+            <div class="flip-box">
+                <div class="flip-box-inner">
+                    <div class="flip-box-front">
+                        <h6 class="m-3">Nous trouver</h6>
+                    </div>
+                    <div class="flip-box-back">
+                        <p>14 rue Henri Cornu, Technopole,<br>97490 Sainte-Clotilde </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="row socialmedia ">
                 <a href="#"><i class="fab fa-facebook-f"></i></a>
                 <a href="#"><i class="fab fa-twitter"></i></a>
                 <a href="#"><i class="fab fa-instagram"></i></a>
