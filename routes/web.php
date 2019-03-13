@@ -15,10 +15,6 @@ Route::get('/', function () {
     return view('index');
 });
 
-Route::get('/todolist', function(){
-    return view('todolist');
-});
-
 Route::get('/', function () {
     return view('index');
 });

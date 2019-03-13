@@ -28,7 +28,7 @@
         
         public function getAllInfo() {
            
-        echo '<div class="card justify-content-center text-center m-1">';
+        echo '<div class="card justify-content-center text-center m-5">';
             echo '<div class="card-body">';
             echo '<h5 class="card-title">'.$this->nom.'</h5>';
             echo '<p class="card-text">Cette randonnée de '.$this->distance.' . Son niveau de difficulté : '.$this->difficulte.'.</p></div>';
