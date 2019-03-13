@@ -28,8 +28,8 @@ Route::post('/connexion', 'ConnexionController@traitement');
 Route::get('/utilisateurs', 'UtilisateursController@liste');
 
 Route::get('/randonnees', 'RandonneesController@liste');
-Route::get('/randonnees', 'RandonneesController@formulaire');
-Route::post('/randonnees', 'RandonneesController@traitement');
+Route::get('/creer-randonnee', 'RandonneesController@formulaire');
+Route::post('/creer-randonnee', 'RandonneesController@traitement');
 
 Route::group([
     'middleware' => 'App\Http\Middleware\Auth',

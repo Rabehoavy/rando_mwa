@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Utilisateur;
 use App\Randonnee;
 use App\Message;
 
@@ -29,7 +30,7 @@ class RandonneesController extends Controller
     }
     public function formulaire()
     {
-        return view('randonnees');
+        return view('creer-randonnee');
     }
 
     public function traitement()
@@ -43,9 +44,9 @@ class RandonneesController extends Controller
             'type_trajet' => ['required'],
             'date' => ['required'],
         ]);
-
-        $utilisateur = Randonnee::create([
-            'utilisateur_id' => request(user()->id),
+        
+        $randonnee = Randonnee::create([
+            'utilisateur_id' => request(3),
             'nom' => request('name'),
             'difficulte' => request('difficulty'),
             'distance' => request('distance'),
