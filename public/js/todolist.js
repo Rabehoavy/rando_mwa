@@ -1,5 +1,3 @@
-/**************************TO DO LIST ********************************* */
-
 // Pour créer le bouton "fermer" et l'appliquer à chaque élément de la liste
 var myNodelist = document.getElementsByTagName("LI");
 var i;
@@ -29,14 +27,14 @@ list.addEventListener('click', function(ev) {
   }
 }, false);
 
-// Ajoute un élément à la liste quand on clique sur le bouton "ajouter"
+// Crée une nouvelle liste d'item quand on clique sur le bouton "ajouter"
 function newElement() {
   var li = document.createElement("li");
   var inputValue = document.getElementById("myInput").value;
   var t = document.createTextNode(inputValue);
   li.appendChild(t);
   if (inputValue === '') {
-    alert("Il faut écrire quelque chose !");
+    alert("You must write something!");
   } else {
     document.getElementById("myUL").appendChild(li);
   }
