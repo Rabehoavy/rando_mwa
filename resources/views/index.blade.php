@@ -1,7 +1,7 @@
 @extends ('layout')
 
 @section ('contenu')
-
+<br><br>
 <h3>Nos futures randonnées</h3>
 <div class="card-deck col-md-12 m-3">
 
@@ -28,8 +28,7 @@
         
         public function getAllInfo() {
            
-        echo '<div class="card justify-content-center text-centerm-1" style="width: 18rem;">';
-            echo '<div class="card align-item-center text-center" style="width: 18rem;">';
+        echo '<div class="card justify-content-center text-center m-1">';
             echo '<div class="card-body">';
             echo '<h5 class="card-title">'.$this->nom.'</h5>';
             echo '<p class="card-text">Cette randonnée de '.$this->distance.' . Son niveau de difficulté : '.$this->difficulte.'.</p></div>';
@@ -38,6 +37,7 @@
             echo '</div>';
             }
     
+
 
   }
 
@@ -52,11 +52,10 @@
 
    
 
-
 ?>
 
 </div>
-
+<br><br>
 
 <!--
 <div class="container">

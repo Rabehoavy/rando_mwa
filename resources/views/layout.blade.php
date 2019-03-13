@@ -9,7 +9,6 @@
 
         <link href="{{ asset('css/style.css') }}" rel="stylesheet">
         <link href="{{ asset('css/cards.css') }}" rel="stylesheet">
-        <link href="{{ asset('css/todolist.css') }}" rel="stylesheet">
 
         <script type="text/javascript" src="{{ asset('js/todolist.js') }}"></script>
 
@@ -149,13 +148,13 @@ echo "  ";
 
 
     <footer>
-        <!------ La partie footer commune à toutes les pages-------------->
     <div class="container text-center">
+    
+    <div class="">
     <h5 class="text-center text-white m-3">Nous contacter</h2>
                     <div class="row">
                         <div class="col-md-1"></div>
                         <div class="col-md-3">
-                                <!--1er flip box-->
                             <div class="flip-box">
                                 <div class="flip-box-inner">
                                     <div class="flip-box-front">
@@ -170,17 +169,11 @@ echo "  ";
                         </div>
                         <div class="col-md-1"></div>
 
-                                <!--2ème flip box-->
                         <div class="col-md-3">
                             <div class="flip-box">
                                 <div class="flip-box-inner">
                                     <div class="flip-box-front">
                                         <h6 class="m-3">Nous appeler</h6><br><br>
-
-                                    </div>
-                                    <div class="flip-box-back">
-                                        <p class="m-3">0262 92 10 72</p>
-                                    </div>
 
                                     </div>
                                     <div class="flip-box-back">
@@ -191,7 +184,6 @@ echo "  ";
                             </div>
                         </div>
 
-                        <!--3ème flip box-->
                         <div class="col-md-1"></div>
                         <div class="col-md-3">
                             <div class="flip-box">
