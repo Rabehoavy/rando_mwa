@@ -57,6 +57,42 @@ footer {
 .socialmedia a:hover {
     background-color: #000000;
 }
+/***********************Header********************************/
+
+/* Accueil */
+#home{
+    min-height: 700px;
+    width: auto;
+    color: white;
+    padding-top: 20%;
+    background: linear-gradient(
+  rgba(0, 0, 0, 0.445), 
+  rgba(0, 0, 0, 0.245)
+  ),url('../images/home.jpg');
+    
+   /* Center and scale the image nicely */
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size:cover;
+   text-align: center;
+  }
+ 
+  .bg-transparent{
+  background: linear-gradient(
+  rgba(0, 0, 0, 0.845), 
+  rgba(0, 0, 0, 0.645));
+ }
+ 
+ #bouton_inscription{
+background-color: #0da0b2
+
+ }
+
+ #bouton_connexion{
+  background-color: #0da0b2
+  
+   }
+
 
 /***********************Flip Box********************************/
 

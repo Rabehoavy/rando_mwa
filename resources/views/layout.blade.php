@@ -31,6 +31,116 @@
         <!--Header-->
     <header>
 
+    <?php
+
+// Dans le nav bar on retrouve le logo, le nom du site, les boutons d'inscription et de connexion qui sont en modal
+echo "<nav class=\"navbar navbar-expand-lg navbar-dark fixed-top bg-transparent\">\n";
+echo "      <img class=\"mb-3\" src=\"images/logo.png\">\n";
+echo "      <a class=\"navbar-brand\" href=\"#\">\n";
+echo "        <h2 style=\"color: #0da0b2\">RANDO<span style=\"color: #00cc66\">MWA</span></h2>\n";
+echo "      </a>\n";
+echo "  \n";
+echo "      <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarNavAltMarkup\" aria-controls=\"navbarNavAltMarkup\"\n";
+echo "        aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n";
+echo "        <span class=\"navbar-toggler-icon\"></span>\n";
+echo "      </button>\n";
+echo "      <div class=\"collapse navbar-collapse justify-content-end\" id=\"navbarNavAltMarkup\">\n";
+echo "        <div class=\"navbar-nav\">\n";
+echo "          <button id=\"bouton_inscription\" data-toggle=\"modal\" data-target=\"#formulaire\" type=\"button\" class=\"btn btn-primary btn-sm ml-4\">INSCRIPTION</button>\n";
+echo "    </div>\n";
+echo "    <div data-backdrop=\"false\" class=\"modal fade\" id=\"formulaire\">\n";// ajout data-backdrop comme "false" car les formulaires ne pouvais pas être saisies, ils étaient recouvert d'un filtre noir
+echo "      <div class=\"modal-dialog\">\n";
+echo "        <div class=\"modal-content\">\n";
+echo "          <div class=\"modal-header\">\n";
+echo "            <h4 class=\"modal-title\">Inscription :</h4>              \n";
+echo "            <button id=\"bouton_inscription\" type=\"button\" class=\"close\" data-dismiss=\"modal\">\n";
+echo "              <span>×</span>\n";
+echo "            </button>\n";
+echo "          </div>\n";
+echo "          <div class=\"modal-body row\">\n";
+echo "            <form class=\"col\" action=\"test.php\">\n";
+echo "              <div class=\"form-group\">\n";
+echo "                <label for=\"nom\" class=\"form-control-label\">Nom</label>\n";
+echo "                <input type=\"text\" class=\"form-control\" name =\"nom\" id=\"nom\" placeholder=\"Votre nom\">\n";
+echo "              </div>\n";
+echo "              <div class=\"form-group\">\n";
+echo "                <label for=\"nom\" class=\"form-control-label\">Prénom</label>\n";
+echo "                <input type=\"text\" class=\"form-control\" name =\"nom\" id=\"nom\" placeholder=\"Votre prénom\">\n";
+echo "              </div>\n";
+echo "              <div class=\"form-group\">\n";
+echo "                <label for=\"nom\" class=\"form-control-label\">Numéro de téléphone</label>\n";
+echo "                <input type=\"text\" class=\"form-control\" name =\"nom\" id=\"nom\" placeholder=\"Votre numéro de téléphone\">\n";
+echo "              </div>\n";
+echo "\n";
+echo "              <div class=\"form-group\">\n";
+echo "                <label for=\"email\" class=\"form-control-label\">Email</label>\n";
+echo "                <input type=\"email\" class=\"form-control\" name=\"email\" id=\"email\" placeholder=\"Votre Email\">\n";
+echo "              </div>\n";
+echo "              <div class=\"form-group\">\n";
+echo "                <label for=\"password\" class=\"form-control-label\">Mot de passe</label>\n";
+echo "                <input type=\"password\" class=\"form-control\" name =\"password\" id=\"password\" placeholder=\"Votre mot de passe\">\n";
+echo "              </div>\n";
+echo "              <div class=\"form-group\">\n";
+echo "                <label for=\"nom\" class=\"form-control-label\">Nom</label>\n";
+echo "                <input type=\"password\" class=\"form-control\" name =\"password_confirmation\" id=\"password_confirmation\" placeholder=\"Confirmez votre mot de passe\">\n";
+echo "              </div>\n";
+echo "              <button type=\"submit\" class=\"btn btn-primary pull-right\">Envoyer</button>\n";
+echo "            </form>\n";
+echo "          </div>\n";
+echo "        </div>\n";
+echo "      </div>\n";
+echo "    </div>\n";
+echo "    <div id=\"html\">\n";
+echo "    <button id=\"bouton_inscription\" data-toggle=\"modal\" data-target=\"#connexion\" type=\"button\" class=\"btn btn-primary btn-sm ml-4\">CONNEXION</button>\n";
+echo "    </div>\n";
+echo "    <div data-backdrop=\"false\" class=\"modal fade\" id=\"connexion\">\n";// ajout data-backdrop comme "false" car les formulaires ne pouvais pas être saisies, ils étaient recouvert d'un filtre noir
+echo "      <div class=\"modal-dialog\">\n";
+echo "        <div class=\"modal-content\">\n";
+echo "          <div class=\"modal-header\">\n";
+echo "            <h4 class=\"modal-title\">Connexion :</h4>              \n";
+echo "            <button id=\"bouton_inscription\" type=\"button\" class=\"close\" data-dismiss=\"modal\">\n";
+echo "              <span>×</span>\n";
+echo "            </button>\n";
+echo "          </div>\n";
+echo "          <div class=\"modal-body row\">\n";
+echo "            <form class=\"col\" action=\"test.php\">\n";
+echo "              <div class=\"form-group\">\n";
+echo "                <label for=\"email\" class=\"form-control-label\">Email</label>\n";
+echo "                <input type=\"email\" class=\"form-control\" name=\"email\" id=\"email\" placeholder=\"Votre Email\">\n";
+echo "              </div>\n";
+echo "              <div class=\"form-group\">\n";
+echo "                <label for=\"password\" class=\"form-control-label\">Mot de passe</label>\n";
+echo "                <input type=\"password\" class=\"form-control\" name =\"password\" id=\"password\" placeholder=\"Votre mot de passe\">\n";
+echo "              </div>\n";
+echo "              <button type=\"submit\" class=\"btn btn-primary pull-right\">Connexion</button>\n";
+echo "            </form>\n";
+echo "          </div>\n";
+echo "        </div>\n";
+echo "      </div>\n";
+echo "        </div>\n";
+echo "      </div>\n";
+echo "    </nav>\n";
+echo "  ";
+
+
+    // HOME pour le header, le background
+    echo "<header class=\"home\" id=\"home\">\n";
+echo "          <div class=\"container\" style=\"z-index: -1;\">\n";
+echo "              <section>\n";
+echo "                  <article>\n";
+echo "                      <div class=\"row\">\n";
+echo "                          <div class=\"offset-md-3 col-md-6\">\n";
+echo "                              \n";
+echo "                          </div>\n";
+echo "                      </div>\n";
+echo "                  </article>\n";
+echo "              </section>\n";
+echo "          </div>\n";
+echo "      </header>\n";
+echo "  ";
+
+?>
+
     </header>
 
             @yield ('contenu')
