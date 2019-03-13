@@ -10,7 +10,6 @@
         <link href="{{ asset('css/style.css') }}" rel="stylesheet">
         <link href="{{ asset('css/cards.css') }}" rel="stylesheet">
 
-        <script type="text/javascript" src="{{ asset('js/todolist.js') }}"></script>
 
         <!--Liens CDN Bootstrap-->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -30,7 +29,6 @@
     <body>
         <!--Header-->
     <header>
-
     <?php
 
 // Dans le nav bar on retrouve le logo, le nom du site, les boutons d'inscription et de connexion qui sont en modal
@@ -140,7 +138,6 @@ echo "      </header>\n";
 echo "  ";
 
 ?>
-
     </header>
 
             @yield ('contenu')
@@ -148,58 +145,59 @@ echo "  ";
 
 
     <footer>
-    <div class="container text-center">
-    
-    <div class="">
-    <h5 class="text-center text-white m-3">Nous contacter</h2>
-                    <div class="row">
-                        <div class="col-md-1"></div>
-                        <div class="col-md-3">
-                            <div class="flip-box">
-                                <div class="flip-box-inner">
-                                    <div class="flip-box-front">
-                                        <h6 class="m-3">Nous écrire</h6><br><br>
-                                    </div>
-                                    <div class="flip-box-back">
-                                        <p class="m-3">rando@mwa.com</p>
+<div class="container text-center">
 
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-1"></div>
+    <h5 class="text-center text-white m-3">Nous contacter</h5>
+    <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-3">
+            <!--1er flip box-->
+            <div class="flip-box">
+                <div class="flip-box-inner">
+                    <div class="flip-box-front">
+                        <h6 class="m-3">Nous écrire</h6><br><br>
+                    </div>
+                    <div class="flip-box-back">
+                        <p class="m-3">rando@mwa.com</p>
 
-                        <div class="col-md-3">
-                            <div class="flip-box">
-                                <div class="flip-box-inner">
-                                    <div class="flip-box-front">
-                                        <h6 class="m-3">Nous appeler</h6><br><br>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-1"></div>
 
-                                    </div>
-                                    <div class="flip-box-back">
-                                        <p class="m-3">0262 92 10 72</p>
+        <div class="col-md-3">
+            <div class="flip-box">
+                <div class="flip-box-inner">
+                    <div class="flip-box-front">
+                        <h6 class="m-3">Nous appeler</h6><br><br>
 
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    </div>
+                    <div class="flip-box-back">
+                        <p class="m-3">0262 92 10 72</p>
 
-                        <div class="col-md-1"></div>
-                        <div class="col-md-3">
-                            <div class="flip-box">
-                                <div class="flip-box-inner">
-                                    <div class="flip-box-front">
-                                        <h6 class="m-3">Nous trouver</h6>
-                                    </div>
-                                    <div class="flip-box-back">
-                                        <p>14 rue Henri Cornu, Technopole,<br>97490 Sainte-Clotilde </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-        </div>   
+                    </div>
+                </div>
+            </div>
+        </div>
 
-    <div class="row socialmedia justify-content-center">
+        <div class="col-md-1"></div>
+        <div class="col-md-3">
+            <div class="flip-box">
+                <div class="flip-box-inner">
+                    <div class="flip-box-front">
+                        <h6 class="m-3">Nous trouver</h6>
+                    </div>
+                    <div class="flip-box-back">
+                        <p>14 rue Henri Cornu, Technopole,<br>97490 Sainte-Clotilde </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="row socialmedia">
                 <a href="#"><i class="fab fa-facebook-f"></i></a>
                 <a href="#"><i class="fab fa-twitter"></i></a>
                 <a href="#"><i class="fab fa-instagram"></i></a>
