@@ -8,7 +8,7 @@
 
 
         <link href="{{ asset('css/style.css') }}" rel="stylesheet">
-        <link href="{{ asset('css/todolist.css') }}" rel="stylesheet">
+        <link href="{{ asset('css/cards.css') }}" rel="stylesheet">
 
         <script type="text/javascript" src="{{ asset('js/todolist.js') }}"></script>
 
