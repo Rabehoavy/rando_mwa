@@ -29,7 +29,7 @@
         public function getAllInfo() {
         
             echo "<div class=\"card justify-content-center text-center m-5\">\n";
-            echo "  <div class=\"card-body\">\n";
+            echo " <div class=\"card-body\">\n";
             echo "<h5 class=\"card-title\">$this->nom</h5>\n";
             echo "<p class=\"card-text\">Cette randonnée parcourt $this->distance, avec un dénivelé de $this->denivele et son niveau est $this->difficulte sur un trajet de type $this->type.</p><br>\n";
             echo "<div class=\"card-footer text-muted\"> Durée : $this->duree<br>$this->date</div>\n";
@@ -37,9 +37,7 @@
             echo "</div>\n";
             echo "</div>";
             
-            
         }
-    
 
 
   }
