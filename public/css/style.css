@@ -142,12 +142,10 @@ background-color: #0da0b2
     transform: rotateY(180deg);
   }
 
-<<<<<<< HEAD
 
   #bouton_card{
     background-color: #0da0b2;
   }
-=======
   /***************************************Bouton Scroll revient en haut*********************/
   #myBtn {
     display: none;
@@ -177,4 +175,3 @@ background-color: #0da0b2
     background-color: #0da0b2;
     /* Add a dark-grey background on hover */
 }
->>>>>>> 1bb05b61b99eed2583fa3523b2611486692802fd
