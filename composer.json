@@ -13,7 +13,7 @@
         "laracasts/flash": "^3.0",
         "laravel/framework": "5.8.*",
         "laravel/tinker": "^1.0",
-        "pdo_sqlite": "*"
+        "ext-pdo_sqlite": "*"
     },
     "require-dev": {
         "beyondcode/laravel-dump-server": "^1.0",
