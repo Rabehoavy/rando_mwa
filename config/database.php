@@ -43,7 +43,7 @@ return [
     'prefix' => '',
     'schema' => 'public',
     'sslmode' => 'prefer',
-        ]
+        ],
 
         'sqlite' => [
             'driver' => 'sqlite',
