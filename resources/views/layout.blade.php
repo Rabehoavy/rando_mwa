@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-
+        <!---Liens CSS-->
         <link href="{{ asset('css/style.css') }}" rel="stylesheet">
         <link href="{{ asset('css/cards.css') }}" rel="stylesheet">
 
@@ -57,6 +57,8 @@ echo "            </button>\n";
 echo "          </div>\n";
 echo "          <div class=\"modal-body row\">\n";
 ?>
+
+            <!----------------------------FORMULAIRE D'INSCRIPTION--------------------------->
             <form action="/inscription" method="post" class="col">
             {{ csrf_field() }}
 
@@ -145,6 +147,7 @@ echo "            </button>\n";
 echo "          </div>\n";
 echo "          <div class=\"modal-body row\">\n";
 ?>
+
                 <form action="/connexion" method="post" class="col">
                     {{ csrf_field() }}
 
@@ -184,7 +187,7 @@ echo "    </nav>\n";
 echo "  ";
 
 
-    // HOME pour le header, le background
+    // HOME pour le header, le background-image
     echo "<header class=\"home\" id=\"home\">\n";
 echo "          <div class=\"container\" style=\"z-index: -1;\">\n";
 echo "              <section>\n";
@@ -208,18 +211,22 @@ echo "  ";
 
 
     <footer>
+        <!--------------------------------Pied de page---------------------------------->
 <div class="container text-center">
 
+                <!---------------------Nous contacter--------------------------->
     <h5 class="text-center text-white m-3">Nous contacter</h5>
     <div class="row">
         <div class="col-md-1"></div>
         <div class="col-md-3">
-            <!--1er flip box-->
+            <!--1er flip box (boite qui tourne)-->
             <div class="flip-box">
                 <div class="flip-box-inner">
+                        <!--Face avant-->
                     <div class="flip-box-front">
                         <h6 class="m-3">Nous écrire</h6><br><br>
                     </div>
+                        <!--Face arrière--->
                     <div class="flip-box-back">
                         <p class="m-3">rando@mwa.com</p>
 
@@ -228,14 +235,16 @@ echo "  ";
             </div>
         </div>
         <div class="col-md-1"></div>
+            <!--2ème flip box-->
 
         <div class="col-md-3">
             <div class="flip-box">
                 <div class="flip-box-inner">
+                        <!--Face avant-->
                     <div class="flip-box-front">
                         <h6 class="m-3">Nous appeler</h6><br><br>
-
                     </div>
+                        <!--Face arrière--->
                     <div class="flip-box-back">
                         <p class="m-3">0262 92 10 72</p>
 
@@ -247,10 +256,12 @@ echo "  ";
         <div class="col-md-1"></div>
         <div class="col-md-3">
             <div class="flip-box">
+                        <!--Face avant-->
                 <div class="flip-box-inner">
                     <div class="flip-box-front">
                         <h6 class="m-3">Nous trouver</h6>
                     </div>
+                        <!--Face arrière--->
                     <div class="flip-box-back">
                         <p>14 rue Henri Cornu, Technopole,<br>97490 Sainte-Clotilde </p>
                     </div>
@@ -260,6 +271,7 @@ echo "  ";
     </div>
 </div>
 
+            <!--------------------------Réseaux sociaux--------------------->
     <div class="row socialmedia">
                 <a href="#"><i class="fab fa-facebook-f"></i></a>
                 <a href="#"><i class="fab fa-twitter"></i></a>
@@ -267,6 +279,7 @@ echo "  ";
                 <a href="#"><i class="fab fa-youtube"></i></a>
        </div>
          
+            <!------------------------Mentions obligatoire---------------------->
     <div class="text-center">
     <?php
         $mentions = ["2019 ©","Mentions légales", "Politique de confidentialité", "Conditions d'utilisation"];
@@ -276,10 +289,13 @@ echo "  ";
             echo '<br><br>';
     ?>
     </div>
+
+    <div class="text-center">
+
     
     
-    
-        </div>
+    </div>
+
     </footer>
     </body>
 </html>
