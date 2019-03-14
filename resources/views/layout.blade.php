@@ -29,65 +29,6 @@
     <body>
     <!--Header-->
     <header>
-    <?php
-
-// Dans le nav bar on retrouve le logo, le nom du site, les boutons d'inscription et de connexion qui sont en modal
-echo "<nav class=\"navbar navbar-expand-lg navbar-dark fixed-top bg-transparent\">\n";
-echo "      <img class=\"mb-3\" src=\"images/logo.png\">\n";
-echo "      <a class=\"navbar-brand\" href=\"/\">\n";
-echo "        <h2 style=\"color: #0da0b2\">RANDO<span style=\"color: #00cc66\">MWA</span></h2>\n";
-echo "      </a>\n";
-echo "  \n";
-echo "      <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarNavAltMarkup\" aria-controls=\"navbarNavAltMarkup\"\n";
-echo "        aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n";
-echo "        <span class=\"navbar-toggler-icon\"></span>\n";
-echo "      </button>\n";
-?>
-                <div class="buttons">
-                    @auth
-                         @include('partials.navbar-item', ['lien' => '/creer-randonnee', 'texte' => 'Créer une randonnée'])
-                    @endauth
-                </div>
-<?php
-echo "      <div class=\"collapse navbar-collapse justify-content-end\" id=\"navbarNavAltMarkup\">\n";
-echo "        <div class=\"navbar-nav\">\n";
-?>
-                @auth
-                <div class="navbar-item">
-                    <div class="buttons">
-                        @include('partials.navbar-item', ['lien' => 'mon-compte', 'texte' => 'Mon compte'])
-                        @include('partials.navbar-item', ['lien' => 'deconnexion', 'texte' => 'Déconnexion'])
-                    </div>
-                </div>
-                @else
-<?php
-echo "          <button id=\"bouton_inscription\" data-toggle=\"modal\" data-target=\"#formulaire\" type=\"button\" class=\"btn btn-primary btn-sm ml-4\">INSCRIPTION</button>\n";
-echo "    </div>\n";
-echo "    <div data-backdrop=\"false\" class=\"modal fade\" id=\"formulaire\">\n";// ajout data-backdrop comme "false" car les formulaires ne pouvais pas être saisies, ils étaient recouvert d'un filtre noir
-echo "      <div class=\"modal-dialog\">\n";
-echo "        <div class=\"modal-content\">\n";
-echo "          <div class=\"modal-header\">\n";
-echo "            <h4 class=\"modal-title\">Inscription :</h4>              \n";
-echo "            <button id=\"bouton_inscription\" type=\"button\" class=\"close\" data-dismiss=\"modal\">\n";
-echo "              <span>×</span>\n";
-echo "            </button>\n";
-echo "          </div>\n";
-echo "          <div class=\"modal-body row\">\n";
-?>
-
-            <!----------------------------FORMULAIRE D'INSCRIPTION--------------------------->
-            <form action="/inscription" method="post" class="col">
-            {{ csrf_field() }}
-
-                <div class="form-group">
-                    <label class="form-control-label" for="name">Nom</label>
-                    <div class="control">
-                        <input class="form-control" type="text" name="name" id="name" placeholder="Votre nom" value="{{ old('name') }}" required>
-                    </div>
-                    @if($errors->has('name'))
-                        <p class="alert alert-danger">{{ $errors->first('name') }}</p>
-                    @endif
-                </div>
 
 
         <!-- Dans le nav bar on retrouve le logo, le nom du site, les boutons d'inscription et de connexion qui sont en modal-->
