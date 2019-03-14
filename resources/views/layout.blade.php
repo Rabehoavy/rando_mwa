@@ -34,7 +34,7 @@
 // Dans le nav bar on retrouve le logo, le nom du site, les boutons d'inscription et de connexion qui sont en modal
 echo "<nav class=\"navbar navbar-expand-lg navbar-dark fixed-top bg-transparent\">\n";
 echo "      <img class=\"mb-3\" src=\"images/logo.png\">\n";
-echo "      <a class=\"navbar-brand\" href=\"#\">\n";
+echo "      <a class=\"navbar-brand\" href=\"/\">\n";
 echo "        <h2 style=\"color: #0da0b2\">RANDO<span style=\"color: #00cc66\">MWA</span></h2>\n";
 echo "      </a>\n";
 echo "  \n";
@@ -44,9 +44,8 @@ echo "        <span class=\"navbar-toggler-icon\"></span>\n";
 echo "      </button>\n";
 ?>
                 <div class="buttons">
-                    @include('partials.navbar-item', ['lien' => '/', 'texte' => 'Accueil'])
                     @auth
-                        @include('partials.navbar-item', ['lien' => auth()->user()->nom, 'texte' => auth()->user()->nom])
+                         @include('partials.navbar-item', ['lien' => '/creer-randonnee', 'texte' => 'Créer une randonnée'])
                     @endauth
                 </div>
 <?php

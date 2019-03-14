@@ -28,12 +28,13 @@ Route::post('/connexion', 'ConnexionController@traitement');
 Route::get('/utilisateurs', 'UtilisateursController@liste');
 
 Route::get('/randonnees', 'RandonneesController@liste');
-Route::get('/creer-randonnee', 'RandonneesController@formulaire');
-Route::post('/creer-randonnee', 'RandonneesController@traitement');
 
 Route::group([
     'middleware' => 'App\Http\Middleware\Auth',
 ], function () {
+    Route::get('/creer-randonnee', 'RandonneesController@formulaire');
+    Route::post('/creer-randonnee', 'RandonneesController@traitement');
+
     Route::get('/mon-compte', 'CompteController@accueil');
     Route::get('/deconnexion', 'CompteController@deconnexion');
     Route::post('/modification-mot-de-passe', 'CompteController@modificationMotDePasse');

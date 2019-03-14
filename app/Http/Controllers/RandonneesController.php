@@ -46,7 +46,8 @@ class RandonneesController extends Controller
         ]);
         
         $randonnee = Randonnee::create([
-            'utilisateur_id' => request(3),
+            // 'utilisateur_id' => request(auth()),
+            'utilisateur_id' => auth()->user()->id,
             'nom' => request('name'),
             'difficulte' => request('difficulty'),
             'distance' => request('distance'),
