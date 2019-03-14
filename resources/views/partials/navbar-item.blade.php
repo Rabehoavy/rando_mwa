@@ -1,0 +1,1 @@
+<a href="{{ url($lien)}}" class="btn btn-primary {{ request()->is($lien) ? 'is-active' : ''}}">{{ $texte }}</a>

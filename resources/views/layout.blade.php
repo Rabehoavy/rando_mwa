@@ -42,8 +42,26 @@ echo "      <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"colla
 echo "        aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n";
 echo "        <span class=\"navbar-toggler-icon\"></span>\n";
 echo "      </button>\n";
+?>
+                <div class="buttons">
+                    @include('partials.navbar-item', ['lien' => '/', 'texte' => 'Accueil'])
+                    @auth
+                        @include('partials.navbar-item', ['lien' => auth()->user()->nom, 'texte' => auth()->user()->nom])
+                    @endauth
+                </div>
+<?php
 echo "      <div class=\"collapse navbar-collapse justify-content-end\" id=\"navbarNavAltMarkup\">\n";
 echo "        <div class=\"navbar-nav\">\n";
+?>
+                @auth
+                <div class="navbar-item">
+                    <div class="buttons">
+                        @include('partials.navbar-item', ['lien' => 'mon-compte', 'texte' => 'Mon compte'])
+                        @include('partials.navbar-item', ['lien' => 'deconnexion', 'texte' => 'Déconnexion'])
+                    </div>
+                </div>
+                @else
+<?php
 echo "          <button id=\"bouton_inscription\" data-toggle=\"modal\" data-target=\"#formulaire\" type=\"button\" class=\"btn btn-primary btn-sm ml-4\">INSCRIPTION</button>\n";
 echo "    </div>\n";
 echo "    <div data-backdrop=\"false\" class=\"modal fade\" id=\"formulaire\">\n";// ajout data-backdrop comme "false" car les formulaires ne pouvais pas être saisies, ils étaient recouvert d'un filtre noir
@@ -180,6 +198,9 @@ echo "        </div>\n";
 echo "      </div>\n";
 echo "        </div>\n";
 echo "      </div>\n";
+?>
+            @endauth
+<?php
 echo "    </nav>\n";
 echo "  ";
 
@@ -202,6 +223,7 @@ echo "  ";
 
 ?>
     </header>
+            @include('flash::message')
 
             @yield ('contenu')
 
