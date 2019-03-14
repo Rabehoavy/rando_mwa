@@ -30,6 +30,7 @@ footer {
 }
 
 
+
 .socialmedia {
     width: 100%;
     height: auto;
@@ -141,7 +142,39 @@ background-color: #0da0b2
     transform: rotateY(180deg);
   }
 
+<<<<<<< HEAD
 
   #bouton_card{
     background-color: #0da0b2;
   }
+=======
+  /***************************************Bouton Scroll revient en haut*********************/
+  #myBtn {
+    display: none;
+    /* Caché par défault */
+    position: fixed;
+    /* Position Fixe */
+    bottom: 20px;
+    /* Placer le bouton en bas de la page*/
+    right: 30px;
+    /* Placer le bouton à droite de la page*/
+    z-index: 99;
+    /* S'assure que ça ne chevauche pas */
+    border: none;
+    /* Enlève les bords */
+    outline: none;
+    /* Enlève le contour */
+    background-color: #1a75ff;
+    color: white;
+    cursor: pointer;
+    /* Ajoute le curseur de la souris sur le bouton on hover */
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 18px;
+}
+
+#myBtn:hover {
+    background-color: #0da0b2;
+    /* Add a dark-grey background on hover */
+}
+>>>>>>> 1bb05b61b99eed2583fa3523b2611486692802fd
