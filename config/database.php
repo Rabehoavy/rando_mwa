@@ -32,7 +32,7 @@ return [
     */
 
     'connections' => [
-        'pgsql'=>[
+        'postgres'=>[
             'driver' => 'pgsql',
     'host' => env("DB_HOST"),
     'port' => env("DB_PORT"),
