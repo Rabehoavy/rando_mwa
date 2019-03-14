@@ -1,8 +1,6 @@
 @extends ('layout')
 
 @section ('contenu')
-<button onclick="topFunction()" id="myBtn" title="Go to top">Haut</button>
-
 <br><br>
 <h3>Nos futures randonnées</h3>
 <div class="card-deck col-md-12 m-3">

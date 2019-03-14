@@ -143,31 +143,26 @@ background-color: #0da0b2
   /***************************************Bouton Scroll revient en haut*********************/
   #myBtn {
     display: none;
-    /* Hidden by default */
+    /* Caché par défault */
     position: fixed;
-    /* Fixed/sticky position */
+    /* Position Fixe */
     bottom: 20px;
-    /* Place the button at the bottom of the page */
+    /* Placer le bouton en bas de la page*/
     right: 30px;
-    /* Place the button 30px from the right */
+    /* Placer le bouton à droite de la page*/
     z-index: 99;
-    /* Make sure it does not overlap */
+    /* S'assure que ça ne chevauche pas */
     border: none;
-    /* Remove borders */
+    /* Enlève les bords */
     outline: none;
-    /* Remove outline */
+    /* Enlève le contour */
     background-color: #1a75ff;
-    /* Set a background color */
     color: white;
-    /* Text color */
     cursor: pointer;
-    /* Add a mouse pointer on hover */
+    /* Ajoute le curseur de la souris sur le bouton on hover */
     padding: 15px;
-    /* Some padding */
     border-radius: 10px;
-    /* Rounded corners */
     font-size: 18px;
-    /* Increase font size */
 }
 
 #myBtn:hover {

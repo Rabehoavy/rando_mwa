@@ -29,6 +29,10 @@
     </head>
 
     <body>
+
+    <!--Bouton pour scroller en haut-->
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Haut</button>
+
     <!--Header-->
     <header>
 
