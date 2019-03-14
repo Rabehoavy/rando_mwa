@@ -212,7 +212,8 @@
                     <article>
                         <div class="row">
                             <div class="offset-md-3 col-md-6">
-
+                            <h5 class="text-white pt-5 mt-5">Cette application propose des randonnées organisées dans toute l'île de La Réunion. Vous avez la possibilité de  vous
+                                inscrire à chaque randonnée proposée.</h5>
                             </div>
                         </div>
                     </article>

@@ -33,7 +33,7 @@
             echo "<h5 class=\"card-title\">$this->nom</h5>\n";
             echo "<p class=\"card-text\">Cette randonnée parcourt $this->distance, avec un dénivelé de $this->denivele et son niveau est $this->difficulte sur un trajet de type $this->type.</p><br>\n";
             echo "<div class=\"card-footer text-muted\"> Durée : $this->duree<br>$this->date</div>\n";
-            echo "<button><a href=\"#\" class=\"text-white\">S'inscrire</a></button>\n";
+            echo "<button id=\"bouton_card\"><a href=\"#\" class=\"text-white\">S'inscrire</a></button>\n";
             echo "</div>\n";
             echo "</div>";
             
