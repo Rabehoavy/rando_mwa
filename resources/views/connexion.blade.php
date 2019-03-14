@@ -1,33 +1,37 @@
 @extends('layout')
 
 @section('contenu')
-    <form action="/connexion" method="post" class="section">
+<br><br>
+<div class="row col-md-3">
+    <form action="/connexion" method="post" class="col">
         {{ csrf_field() }}
 
-        <div class="field">
-            <label class="label">Adresse e-mail</label>
+        <div class="form-group">
+            <label class="form-control-label">Email</label>
             <div class="control">
-                <input class="input" type="email" name="email" value="{{ old('email') }}">
+                <input class="form-control" type="email" name="email" value="{{ old('email') }}" placeholder="Votre Email">
             </div>
             @if($errors->has('email'))
-                <p class="help is-danger">{{ $errors->first('email') }}</p>
+                <p class="alert alert-danger">{{ $errors->first('email') }}</p>
             @endif
         </div>
 
-        <div class="field">
-            <label class="label">Mot de passe</label>
+        <div class="form-group">
+            <label class="form-control-label">Mot de passe</label>
             <div class="control">
-                <input class="input" type="password" name="password">
+                <input class="form-control" type="password" name="password" placeholder="Votre mot de passe">
             </div>
             @if($errors->has('password'))
-                <p class="help is-danger">{{ $errors->first('password') }}</p>
+                <p class="alert alert-danger">{{ $errors->first('password') }}</p>
             @endif
         </div>
 
-        <div class="field">
+        <div class="form-group">
             <div class="control">
-                <button class="button is-link" type="submit">Se connecter</button>
+                <button class="btn btn-primary pull-right" type="submit">Connexion</button>
             </div>
         </div>
     </form>
+</div>
+    <br><br>
 @endsection

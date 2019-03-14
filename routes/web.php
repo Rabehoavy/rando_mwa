@@ -11,7 +11,9 @@
 |
 */
 
-Route::view('/', 'welcome');
+Route::get('/', function () {
+    return view('index');
+});
 
 Route::get('/', function () {
     return view('index');
@@ -26,6 +28,8 @@ Route::post('/connexion', 'ConnexionController@traitement');
 Route::get('/utilisateurs', 'UtilisateursController@liste');
 
 Route::get('/randonnees', 'RandonneesController@liste');
+Route::get('/creer-randonnee', 'RandonneesController@formulaire');
+Route::post('/creer-randonnee', 'RandonneesController@traitement');
 
 Route::group([
     'middleware' => 'App\Http\Middleware\Auth',
@@ -36,8 +40,8 @@ Route::group([
 
     Route::post('/messages', 'MessagesController@nouveau');
 
-    Route::post('/{email}/suivis', 'SuivisController@nouveau');
-    Route::delete('/{email}/suivis', 'SuivisController@enlever');
+    Route::post('/{nom}/suivis', 'SuivisController@nouveau');
+    Route::delete('/{nom}/suivis', 'SuivisController@enlever');
 });
 
-Route::get('/{email}', 'UtilisateursController@voir');
+Route::get('/{nom}', 'UtilisateursController@voir');

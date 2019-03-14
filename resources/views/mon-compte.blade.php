@@ -1,37 +1,40 @@
 @extends('layout')
 
 @section('contenu')
+<br><br>
     <div class="section">
         <h1 class="title is-1">Mon compte</h1>
     </div>
-
-    <form class="section" action="/modification-mot-de-passe" method="post">
+<div class="row col-md-3">
+    <form class="col" action="/modification-mot-de-passe" method="post">
         {{ csrf_field() }}
 
-        <div class="field">
-            <label class="label">Nouveau mot de passe</label>
+        <div class="form-group">
+            <label class="form-control-label" for="password">Nouveau mot de passe</label>
             <div class="control">
-                <input class="input" type="password" name="password">
+                <input class="form-control" type="password" id="password" name="password" required>
             </div>
             @if($errors->has('password'))
-                <p class="help is-danger">{{ $errors->first('password') }}</p>
+                <p class="alert alert-danger">{{ $errors->first('password') }}</p>
             @endif
         </div>
 
-        <div class="field">
-            <label class="label">Mot de passe (confirmation)</label>
+        <div class="form-group">
+            <label class="form-control-label" for="password_confirmation">Mot de passe (confirmation)</label>
             <div class="control">
-                <input class="input" type="password" name="password_confirmation">
+                <input class="form-control" type="password" id="password_confirmation" name="password_confirmation" required>
             </div>
             @if($errors->has('password_confirmation'))
-                <p class="help is-danger">{{ $errors->first('password_confirmation') }}</p>
+                <p class="alert alert-danger">{{ $errors->first('password_confirmation') }}</p>
             @endif
         </div>
 
-        <div class="field">
+        <div class="form-group">
             <div class="control">
-                <button class="button is-link" type="submit">Modifier mon mot de passe</button>
+                <button class="btn btn-primary pull-right" type="submit">Modifier mon mot de passe</button>
             </div>
         </div>
     </form>
+</div>
+    <br><br>
 @endsection

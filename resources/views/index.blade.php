@@ -1,7 +1,7 @@
 @extends ('layout')
 
 @section ('contenu')
-
+<br><br>
 <h3>Nos futures randonnées</h3>
 <div class="card-deck col-md-12 m-3">
 
@@ -28,15 +28,18 @@
         
         public function getAllInfo() {
            
-            echo '<div class="card align-item-center text-center" style="width: 18rem;">';
+        echo '<div class="card justify-content-center text-center m-5">';
             echo '<div class="card-body">';
             echo '<h5 class="card-title">'.$this->nom.'</h5>';
-            echo '<p class="card-text">Cette randonnée de '.$this->distance.' . Son niveau de difficulté : '.$this->difficulte.'.</p></div>';
+            echo '<p class="card-text">Cette randonnée est de '.$this->distance.' . Son niveau de difficulté : '.$this->difficulte.'.</p></div>';
          //   echo "<br><p class=\"card-text\">Son dénivelé est de '.$this->denivele.' . La randonnée aura lieu le '.$this->date.' en'$this->type'.</p>'";            echo '</div>';
             echo '<div class="card-footer text-muted"> Durée : '.$this->duree.'<br>'.$this->date.'</div>';
+            echo "<button><a href=\"#\" class=\"button text-white\">S'inscrire</a></button>\n";
             echo '</div>';
             }
     
+
+
   }
 
   $mafate = new Sites ('Notre Dame de La Paix', 'Difficile','20 kms', '9h', '1150 m', 'boucle', '17 mars 2019');
@@ -50,11 +53,10 @@
 
    
 
-
 ?>
 
 </div>
-
+<br><br>
 
 <!--
 <div class="container">
